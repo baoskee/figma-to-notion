@@ -1,0 +1,12 @@
+{
+  "name": "figjam-to-notion",
+  "version": "1.0.0",
+  "description": "Figjam and Figma files to Notion",
+  "main": "index.ts",
+  "author": "Bao <baomai@berkeley.edu>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.25.0"
+  }
+}
