@@ -45,7 +45,6 @@ const figmaFileToPage = (projectName: string, file: File) => ({
   'Last modified': {
     date: { start: file.last_modified },
   },
-  // TODO: Include thumbnail URL
 })
 
 const lastParam = (url: string): string => {
@@ -104,13 +103,13 @@ const main = async () => {
   const figmaKeysFromNotion = [...notionPageTable.keys()]
   const figmaKeys = new Set(
     allFiles
-      .map(proj => proj.files)
+      .map((proj) => proj.files)
       .flat()
-      .map(f => f.key)
+      .map((f) => f.key)
   )
 
   // MARK: Delete Notion pages that are no longer in Figma
-  for (let key of figmaKeysFromNotion.filter(k => !figmaKeys.has(k))) {
+  for (let key of figmaKeysFromNotion.filter((k) => !figmaKeys.has(k))) {
     await notion.pages.update({
       page_id: notionPageTable.get(key)!,
       archived: true,
