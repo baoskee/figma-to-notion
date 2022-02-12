@@ -7,9 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "x": "ts-node index.ts",
     "prettier:write": "prettier --write ."
   },
   "dependencies": {
+    "@notionhq/client": "^0.4.13",
     "axios": "^0.25.0",
     "dotenv": "^16.0.0"
   },
